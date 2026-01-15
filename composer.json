@@ -1,0 +1,15 @@
+{
+    "name": "hibat/php-routing-system",
+    "autoload": {
+        "psr-4": {
+            "Hibat\\PhpRoutingSystem\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "HIBA53757",
+            "email": "hibatallahsadiki20@gmail.com"
+        }
+    ],
+    "require": {}
+}
