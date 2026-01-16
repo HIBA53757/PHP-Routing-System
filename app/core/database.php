@@ -12,7 +12,7 @@ class Database
     {
         try {
             $this->db = new PDO(
-                "mysql:host=localhost;dbname=bank_system",
+                "mysql:host=localhost;dbname=router",
                 "root",
                 "" 
             );
