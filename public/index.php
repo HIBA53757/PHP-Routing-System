@@ -13,14 +13,23 @@ $router->get("/user/{id}/{user}", function($id, $user){
     
 });
 
+$router->get("/login", function(){
+    include __DIR__ . '/../views/login.php';
+    
+});
+
 
 $router->get("/user/{id}", [AuthController::class, "find"]);
-
+$router->get("/test", [AuthController::class, "allTest"]);
+ 
 
 $router->get("/404", function(){
     echo "404";
 });
 
+
+$router->get('/test-all', callback: [AuthController::class, 'findByIdTest']);
+$router->get('/twig', callback: [AuthController::class, 'testTwifg']);
 
 $router->post("/add", function(){
     print_r($_POST);

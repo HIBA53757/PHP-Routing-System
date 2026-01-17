@@ -64,4 +64,18 @@ abstract class baseModel
         $stmt->execute(['id' => $id]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+      public function where(string $column, $value): array  //find with a condition
+    {
+        $stmt = $this->db->prepare("SELECT * FROM {$this->table} WHERE {$column} = ?");
+        $stmt->execute([$value]);
+        return $stmt->fetchAll();
+    }
+
+     public function count(): int  // count the total
+    {
+        $stmt = $this->db->query("SELECT COUNT(*) FROM {$this->table}");
+        return (int) $stmt->fetchColumn();
+    }
+
 }

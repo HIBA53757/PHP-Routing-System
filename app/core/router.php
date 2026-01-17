@@ -38,8 +38,9 @@ class Router
         self::$routes["POST"][$path] = $callback;
     }
 
+
     // Dispatch the request
-    public function dispatch()
+    public function dispatch()   
     {
         $uri = $_SERVER['REQUEST_URI'] ?? '/';
         $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
